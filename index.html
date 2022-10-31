@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorienrechner</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <form>
+        <h1>Kalorienrechner</h1>
+        <div class="flex">
+
+            <label for="height">Körpergröße (in cm)</label>
+            <input type="number" value="100" name="" id="height">
+
+            <label for="age">Alter</label>
+            <input type="number" name="age" value="10" id="age">
+
+            <label for="weight">Gewicht (in kg)</label>
+            <input type="number" value="50" name="" id="weight">
+
+            <label for="woman man" style="margin: 3px 0;">Geschlecht</label>
+        </div>
+        <div class="gender">
+            <input type="radio" name="gender" id="female">
+            <label for="female">Frau </label>
+        </div>
+        <div class="gender">
+            <input type="radio" name="gender" id="male" checked>
+            <label for="male">Mann</label>
+        </div>
+        <div class="flex">
+
+            <label for="activity" style="margin: 5px 0px;">Arbeits- und Freizeitaktivität</label>
+
+            <select name="activity" id="activity">
+                <option value="0.95">Schlafen</option>
+                <option value="1.2">Nur Sitzen oder Liegen</option>
+                <option value="1.5">Sitzend aber kaum köprerliche Aktivität (z.B Büroarbeit etc.)</option>
+                <option value="1.7">Sitzend aber normale köprerliche Aktivität (z.B Fließbandarbeiter etc.)</option>
+                <option value="1.9">körperliche beanspruchende Arbeit (z.B. Mechaniker etc.)</option>
+                <option value="2.2">Körperliche anstrengende Arbeit </option>
+            </select>
+            <button type="submit" onclick="calculate(event)">Submit</button>
+        </div>
+        <div class="table">
+
+            <table>
+                <tr>
+                    <th></th>
+                    <th>kcal</th>
+                    <th>kJ</th>
+                </tr>
+                <tr>
+                    <th>Grundumsatz</th>
+                    <th id="grundKcal"></th>
+                    <th id="grundkJ"></th>
+                </tr>
+                <tr>
+                    <th>Gesamtumsatz</th>
+                    <th id="gesamtKcal"></th>
+                    <th id="gesamtkJ"></th>
+                </tr>
+            </table>
+        </div>
+
+    </form>
+
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
