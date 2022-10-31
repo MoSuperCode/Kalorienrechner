@@ -10,18 +10,20 @@ function calculate(event) {
     let grundUmsatzFrau = 655.1 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
     let output1 = document.getElementById("grundKcal");
     let output2 = document.getElementById("gesamtKcal");
+
     console.log({ male, female, pal, age, height, weight, grundUmsatzMann, grundUmsatzFrau });
 
     let ergebnis;
     if (male === true) {
         ergebnis = grundUmsatzMann * pal;
-        output1.innerHTML = grundUmsatzMann;
-        output2.innerHTML = ergebnis;
+        output1.innerHTML = grundUmsatzMann.toFixed(2);
+        output2.innerHTML = ergebnis.toFixed(2);
+
 
     } else if (female === true) {
         ergebnis = grundUmsatzFrau * pal;
-        output1.innerHTML = grundUmsatzFrau;
-        output2.innerHTML = ergebnis;
+        output1.innerHTML = grundUmsatzFrau.toFixed(2);
+        output2.innerHTML = ergebnis.toFixed(2);
     } else {
         console.log("Fülle alle Felder aus!");
     }
